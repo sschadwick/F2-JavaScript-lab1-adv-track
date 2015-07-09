@@ -99,9 +99,9 @@ var j = 0;
 
 while (j < 9) {         //counter will run through 9 times
   count += 'chirp ';    //add a chirp every iteration
-  j++;
+  j++;                  //add one to counter j
 }
-sentence2 = count.trim() + '.';
+sentence2 = count.trim() + '.'; //removes whitespace and adds .
 console.log(sentence2);
 
 // Leave these assertions as-is! If they pass, your code works.
@@ -126,6 +126,9 @@ var nextAnimal;
 
 nextAnimal = favoriteAnimals[Math.floor((Math.random()) * favoriteAnimals.length)];
 console.log(nextAnimal);
+/*This finds a random number, multiplies it by the number of animals in the array
+then rounds down to the nearest integer. This random number is then used to index
+the array, giving a random result from the array. */
 
 assert(nextAnimal, 'assign something to nextAnimal');
 
