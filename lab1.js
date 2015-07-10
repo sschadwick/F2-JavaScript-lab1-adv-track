@@ -163,7 +163,7 @@ var avgMeal = 0;
 
 for (var k = 0; k < mealsPerDay.length; k++) { //iterate through the array
   sum += mealsPerDay[k];  //add value for current day to sum
-  avgMeal = sum / (k + 1); //find average from current sum over the index of current day
+  avgMeal = sum / (k + 1); //find average from current sum over the current day
   console.log('Day ' + (k + 1) + ': ' + avgMeal + ' meals on average'); //print the average number of meals per day so far
   if (avgMeal < 4) { //lion becomes too hungry and eats keep
     tooHungryDay = k; //pass day when lion eats keeper to tooHungryDay
