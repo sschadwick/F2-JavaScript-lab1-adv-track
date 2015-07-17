@@ -94,14 +94,15 @@ console.log(sentence1);
 // TODO: part #2: use a while or do-while loop to replace the words in sentence 2
 // with 'chirp' (10 points)
 
-var count = '';
+var chirps = '';
 var j = 0;
+var wordsFromSentence2 = sentence2.split(' ');
 
-while (j < 9) {         //counter will run through 9 times
-  count += 'chirp ';    //add a chirp every iteration
+while (j < wordsFromSentence2.length) {         //counter will run through for each word in sentence2
+  chirps += 'chirp ';    //add a chirp every iteration
   j++;                  //add one to counter j
 }
-sentence2 = count.trim() + '.'; //removes whitespace and adds .
+sentence2 = chirps.trim() + '.'; //pass new chirps back to sentence2, removes whitespace and adds .
 console.log(sentence2);
 
 // Leave these assertions as-is! If they pass, your code works.
