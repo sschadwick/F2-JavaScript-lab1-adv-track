@@ -43,8 +43,8 @@ function assert(expression, failureMessage) {
  Here are some examples for how to use the assert method:
 */
 
-//assert(1 === 1, '1 equals 1 - this assert will pass.');
-//assert(1 === 2, 'this is an example of a failing assertion. 1 does not equal 2.');
+assert(1 === 1, '1 equals 1 - this assert will pass.');
+assert(1 === 2, 'this is an example of a failing assertion. 1 does not equal 2.');
 
 /* ===========================================================================
 ------------------Assertions (8 points total)---------------------------------
@@ -57,11 +57,7 @@ function assert(expression, failureMessage) {
  it failed.
 */
 
-var elephants = false; //initial values variables
-var monkeys = true;
-
-assert(elephants, 'The elephants are false! They aren\'t here!'); //elepahnts returns false
-assert(monkeys, 'The monkeys are here'); //monkeys returns true
+//your code goes here
 
 /* ========================================================================
 ----------------- Meerkats (20 points total)-------------------------------
@@ -72,7 +68,6 @@ assert(monkeys, 'The monkeys are here'); //monkeys returns true
 
 var sentence1 = 'More food please.';
 var sentence2 = 'Come over here so you can scratch my belly.';
-
 /*
  Your goal is to replace the words in the above sentences with 'chirp' The
  assertions at the end of this section should pass when you're done.
@@ -82,27 +77,12 @@ var sentence2 = 'Come over here so you can scratch my belly.';
 // TODO: part #1: use a for loop to replace the words in sentence 1 with
 // 'chirp' (10 points)
 
-var intVar = ' '; //variable to store and build chirps
-var words = sentence1.split(' '); //copies words from sentence into words array
-
-for (var i = 0; i < words.length; i++) { //code will run once for each word in sentence1
-  intVar += 'chirp '; //add a chirp to intVar
-}
-sentence1 = intVar.trim() + '.'; //set chirps to sentence1, remove whitespace and .
-console.log(sentence1);
+// your code goes here
 
 // TODO: part #2: use a while or do-while loop to replace the words in sentence 2
 // with 'chirp' (10 points)
 
-var count = '';
-var j = 0;
-
-while (j < 9) {         //counter will run through 9 times
-  count += 'chirp ';    //add a chirp every iteration
-  j++;                  //add one to counter j
-}
-sentence2 = count.trim() + '.'; //removes whitespace and adds .
-console.log(sentence2);
+// your code goes here
 
 // Leave these assertions as-is! If they pass, your code works.
 assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
@@ -124,11 +104,7 @@ var nextAnimal;
 // TODO: 12 points
 // Assign one of your favorite animals to nextAnimal using Math.random() to pick
 
-nextAnimal = favoriteAnimals[Math.floor((Math.random()) * favoriteAnimals.length)];
-console.log(nextAnimal);
-/*This finds a random number, multiplies it by the number of animals in the array
-then rounds down to the nearest integer. This random number is then used to index
-the array, giving a random result from the array. */
+// your code goes here
 
 assert(nextAnimal, 'assign something to nextAnimal');
 
@@ -145,7 +121,6 @@ assert(nextAnimal, 'assign something to nextAnimal');
 */
 
 // number of times the new caretaker fed the lion. one array entry per day
-
 var mealsPerDay = [5, 4, 3, 6, 2, 4, 3, 4, 5, 1];
 var tooHungryDay;
 
@@ -158,19 +133,7 @@ var tooHungryDay;
  meals)
 */
 
-var sum = 0;
-var avgMeal = 0;
-
-for (var k = 0; k < mealsPerDay.length; k++) { //iterate through the array
-  sum += mealsPerDay[k];  //add value for current day to sum
-  avgMeal = sum / (k + 1); //find average from current sum over the current day
-  console.log('Day ' + (k + 1) + ': ' + avgMeal + ' meals on average'); //print the average number of meals per day so far
-  if (avgMeal < 4) { //lion becomes too hungry and eats keep
-    tooHungryDay = k; //pass day when lion eats keeper to tooHungryDay
-    console.log('Getting hangry... time to eat');
-    break; //break out of for statement
-  }
-}
+// your code goes here
 
 assert(tooHungryDay, 'remember to assign the answer to tooHungryDay');
 assert(tooHungryDay < 10, 'the lion is too hungry before the end of the array');
